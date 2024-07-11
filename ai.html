@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .button{
+            border:none;
+        }
+        .chat {
+            background-color: #ff7f7f;
+            color:greenyellow;
+            text-emphasis-color: #ffffff;
+            border-radius: 10px;
+            width: 50%;
+            height: 25%;
+            transform:translateY(-25%);
+        }
+        .paint{
+            background-color: hotpink;
+            transform:translateY(25%);
+
+        }
+        .bt-container{
+            background-color: grey;
+            display: flex;
+            flex-direction:column;
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            left: 0;
+            right: 0;
+            padding:0;
+            justify-content: center; /* 水平居中 */
+            align-items: center;
+        }
+        
+    </style>
+    <script>
+        function ChatBtClicked(){
+            console.log("Chat");
+            location.href = "http://183.136.206.184:11113";
+        }
+        function PaintBtClicked(){
+            console.log("Paint");
+            location.href = "http://183.136.206.184:11114";
+        }
+    </script>
+    <body>
+        <div class="bt-container" id="bt-container">
+            <b style="color:khaki;position: absolute;">Welcome to lyxyz5223's AI Website!</b>
+            <button class="button chat" onclick="ChatBtClicked()">打开lyxyz5223的AI聊天WebUI</button>
+            <button class="button chat paint" onclick="PaintBtClicked()">打开lyxyz5223的AI绘画Stable Diffusion WebUI</button>
+        </div>
+    </body>
+</html>
